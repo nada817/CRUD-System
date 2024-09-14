@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CRUD </title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container my-4 m-auto p-3">
+    <h1 class="text-center">
+        CRUD System
+    </h1>
+    <hr>
+<!-- <div>
+    <p class="text-center parag text-capitalize"> bookmark your favourite site </p>
+</div> -->
+<div class="content">
+    <label for="ProductName" class="m-2"> Product Name:</label>
+    <input oninput="nameValidation()" type="text" class="form-control" id="ProductName" >
+<div  id="nameMessage" class="alert alert-danger my-2 d-none ">- Started with capital letter
+    <br>
+    - followed with 3-8 small letters 
+</div>
+
+    <label for="ProductPrice" class="m-2"> Product Price:</label>
+    <input oninput="priceValidation()" type="number" class="form-control " id="ProductPrice" >
+<div id="priceMessage" class="alert alert-danger my-2 d-none">
+price between 1000 to 90000
+</div>
+    <label for="ProductCategory" class="m-2"> Product Category:</label>
+    <input  oninput="categoryValidation()" type="text" class="form-control" id="ProductCategory" >
+<div  id="catmessage" class="alert alert-danger my-2 d-none">
+    - Started with capital letter
+    <br>
+    - followed with 3-8 small letters 
+</div>
+    <label for="ProductDescription" class="m-2"> Product Description:</label>
+    <textarea oninput="descvalidation()" type="text" class="form-control" id="ProductDescription" ></textarea>
+    <div  id="descmessage" class="alert alert-danger my-2 d-none">
+        - must be a small letter
+       <br> -must be 4-40 letters
+    </div>
+    <div class="m-4">
+        <button onclick="addProduct()" class=" w-100 btnn p-2 rounded-1" id="addBtn">
+            Add Product
+        </button>
+
+        <button onclick="updateData()" class=" w-100 btnn p-2 rounded-1 d-none" id="updateBtn">
+            Update Product
+        </button>
+    </div>
+</div>
+ <input oninput="search()" type="search" id="SearchInput" class="my-4 w-75 form-control m-auto" placeholder="Search By Name...">
+<div class="display">
+    <table class="table text-center">
+        <thead >
+            <th>
+                ID
+            </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Description
+        </th>
+       <th>
+        Action
+       </th>
+      
+        </thead>
+        <tbody id="DiaplayData" >
+          
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

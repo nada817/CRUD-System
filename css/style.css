@@ -1,0 +1,31 @@
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;  
+    color: #3b4a6b;
+    background-color:   #f2e2e27b ;
+}
+hr {
+    border: none;
+    border-top: 3px dotted #424874;
+  }
+.btnn{
+  border: none;
+  background-color:#424874;
+  color: white;
+}
+.btnn-del{
+  background-color: #424874 !important;
+  color: white;
+  transition: all 1s;
+}
+.btnn-up{
+  background-color:#a696c8!important;
+  color: white;
+  transition: all 1s;
+}
+.btnn-del:hover ,.btnn-up:hover {
+  background-color:white !important ;
+  color: #3b4a6b !important;
+  border: 1px solid #3b4a6b !important;
+}
